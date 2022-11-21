@@ -20,4 +20,8 @@ public class Book {
     public int getCreateYear () {
         return createYear;
     }
+
+    public void setCreateYear () {
+        this.createYear = createYear;
+    }
 }

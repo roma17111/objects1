@@ -7,6 +7,7 @@ public class Main {
         Author author2 = new Author("Sam", "Johnson");
         Book book2 = new Book("lowe time", "2000",author2);
 
+
         book1.setPublicYear("1965");
         System.out.println("Книга 1");
         System.out.println("Название: " + book1.getBookName() + " Автор: " + author1.getFirstName() +

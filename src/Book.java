@@ -41,4 +41,12 @@ public class Book {
     public int hashCode() {
         return Objects.hash(bookName, publicYear, author);
     }
+
+    @Override
+    public String toString() {
+        return
+                "Название: " + bookName +
+                " Год публикации: " + publicYear +
+                " Автор: " + author;
+    }
 }

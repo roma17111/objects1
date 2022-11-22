@@ -29,17 +29,16 @@ public class Book {
     }
 
 
-
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book book2 = (Book) other;
-        return author.equals(book2.author);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return bookName.equals(book.bookName) && publicYear.equals(book.publicYear) && author.equals(book.author);
     }
 
+    @Override
     public int hashCode() {
-        return Objects.hash(bookName);
+        return Objects.hash(bookName, publicYear, author);
     }
-
 }

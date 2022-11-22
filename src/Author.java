@@ -19,6 +19,14 @@ public class Author {
         return firstName + " " + lastName;
     }
 
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author author2  = (Author) other;
+        return firstName.equals(author2.firstName);
+    }
+
 
 
 }

@@ -28,10 +28,7 @@ public class Book {
         this.publicYear = publicYear;
     }
 
-    public String toString() {
-        return "Название книги: " + bookName + " Автор книги: " + author + " год публикации: " +
-                publicYear;
-    }
+
 
     public boolean equals(Object other) {
         if (this.getClass() != other.getClass()) {
@@ -39,6 +36,10 @@ public class Book {
         }
         Book book2 = (Book) other;
         return author.equals(book2.author);
+    }
+
+    public int hashCode() {
+        return Objects.hash(bookName);
     }
 
 }
